@@ -1,0 +1,16 @@
+---
+- name: Network Getting Started First Playbook with Cisco Switch
+  connection: network_cli
+  gather_facts: true
+  hosts: catalyst2960
+  tasks:
+    - name: Configure domain name
+      ios_config:
+        lines:
+          - ip domain name test.com
+    - name: Add interface description
+      ios_config:
+        parents: interface FastEthernet0/1
+        lines:
+          - description Description added by ansible
+        save_when: modified
