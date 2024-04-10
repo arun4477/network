@@ -1,0 +1,13 @@
+---
+- name: Network Getting Started First Playbook with Cisco Switch
+  connection: network_cli
+  gather_facts: true
+  hosts: catalyst2960
+  tasks:
+    - name: Configure vlan
+      ios_l2_interfaces:
+        config:
+          - name: interface FastEthernet0/2
+            access:
+              vlan: 10
+        state: merged
