@@ -1,7 +1,7 @@
 ---
 - name: Network Getting Started First Playbook with Cisco Switch
   connection: network_cli
-  gather_facts: false
+  gather_facts: true
   hosts: catalyst2960
   tasks:
     - name: Get config for IOS devices
