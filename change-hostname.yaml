@@ -12,7 +12,7 @@
         msg: "The hostname is {{ ansible_net_hostname }} and the OS is {{ ansible_net_version }}"
     - name: Change the hostname
       ios_facts:
-        backup:
+        backup: yes
         lines:
           - hostname catalyst-2960
     - name: Get config for IOS devices
