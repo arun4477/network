@@ -9,6 +9,7 @@
         msg:
           - "Hostname: {{ ansible_net_hostname }}"
           - "Image: {{ ansible_net_image }}"
+          - "IP Addresses: {{ ansible_facts['ansible_net_all_ipv4_addresses'] }}"
     - name: Execute show run command
       ios_command:
         commands:
