@@ -7,8 +7,6 @@
     - name: Get config for IOS devices
       ios_facts:
         gather_subset: all
-      register: all_subset
     - name: Display the config
       debug:
-        #msg: "{{ hostvars[inventory_hostname] }}"
-        var: all_subset 
+        msg: "{{ hostvars[inventory_hostname] }}"
