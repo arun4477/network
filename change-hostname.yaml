@@ -14,7 +14,7 @@
       ios_config:
         backup: yes
         lines:
-          - hostname catalyst-2960
+          - hostname myswitch
     - name: Get config for IOS devices
       ios_facts:
         gather_subset: all
