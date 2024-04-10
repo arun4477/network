@@ -12,5 +12,5 @@
       ios_config:
         parents: interface FastEthernet0/1
         lines:
-          - description Description added by ansible
+          - Description added by ansible
         save_when: modified
