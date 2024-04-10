@@ -1,0 +1,12 @@
+---
+- name: Network Getting Started First Playbook with Cisco Switch
+  connection: network_cli
+  gather_facts: false
+  hosts: catalyst2960
+  tasks:
+    - name: Get config for IOS devices
+      ios_facts:
+        gather_subset: all
+    - name: Display the config
+      debug:
+        msg: "{{ hostvars[inventory_hostname] }}"
