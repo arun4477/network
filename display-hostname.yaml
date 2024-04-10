@@ -7,6 +7,6 @@
     - name: Get config for IOS devices
       ios_facts:
         gather_subset: all
-    - name: Display the config
+    - name: Display the hostname
       debug:
-        msg: "The hostname is {{ ansible_net_hostname }} and the OS is {{ ansible_net_version }} Discplay Config {{ hostvars[inventory_hostname] }}"
+        msg: "The hostname is {{ ansible_net_hostname }} and the OS is {{ ansible_net_version }}"
