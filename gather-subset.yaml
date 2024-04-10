@@ -4,17 +4,17 @@
   gather_facts: true
   hosts: catalyst2960
   tasks:
-    - name: Get config
+    - name: Get hardware config
       ios_facts:
         gather_subset: hardware
       register: subset_hardware
-    - name: Display the config
+    - name: Display the hardware config
       debug:
         var: subset_hardware 
-    - name: Get config
+    - name: Get interface config
       ios_facts:
         gather_subset: interfaces
       register: subset_interface
-    - name: Display the config
+    - name: Display the interface config
       debug:
         var: subset_interface
