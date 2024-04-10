@@ -4,10 +4,10 @@
   gather_facts: true
   hosts: catalyst2960
   tasks:
-    - name: Get facts
+    - name: Get the facts
       debug:
         msg:
           - "Hostname: {{ ansible_net_hostname }}"
           - "Image: {{ ansible_net_image }}"
-          - "IP Address: {{ ansible_net_all_ipv4_addresses[0] }}"
+          - "IP Address: {{ ansible_net_all_ipv4_addresses[] }}"
           - "Interfaces: {{ ansible_net_interfaces }}"
