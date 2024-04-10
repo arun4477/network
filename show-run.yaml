@@ -12,7 +12,7 @@
     - name: Execute show run command
       ios_command:
         commands:
-          - show ip int brief
+          - show run
       register: show_run
     - name: show run output
       debug:
