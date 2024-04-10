@@ -13,3 +13,7 @@
       ios_command:
         commands:
           - show ip int brief
+        register: show_run
+    - name: show run output
+      debug:
+        var: show_run
