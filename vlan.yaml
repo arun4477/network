@@ -7,7 +7,7 @@
     - name: Configure vlan
       ios_l2_interfaces:
         config:
-          - name: interface FastEthernet0/2
+          - name: FastEthernet0/2
             access:
               vlan: 10
         state: merged
