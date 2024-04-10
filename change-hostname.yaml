@@ -15,9 +15,9 @@
         backup: yes
         lines:
           - hostname myswitch
-    - name: Get config for IOS devices
+    - name: Get the changed config for IOS devices
       ios_facts:
         gather_subset: all
-    - name: Display the hostname
+    - name: Display the changed hostname
       debug:
         msg: "The hostname is {{ ansible_net_hostname }} and the OS is {{ ansible_net_version }}"
