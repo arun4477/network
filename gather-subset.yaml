@@ -13,7 +13,7 @@
         var: subset_hardware 
     - name: Get config
       ios_facts:
-        gather_subset: integrface
+        gather_subset: interfaces
       register: subset_interface
     - name: Display the config
       debug:
