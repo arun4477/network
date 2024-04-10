@@ -2,7 +2,7 @@
 - name: Network Getting Started First Playbook with Cisco Switch
   connection: network_cli
   gather_facts: true
-  hosts: catalyst2960
+  hosts: ssh-key
   tasks:
     - name: Get the facts
       debug:
