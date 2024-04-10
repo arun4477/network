@@ -9,5 +9,4 @@
         msg:
           - "Hostname: {{ ansible_net_hostname }}"
           - "Image: {{ ansible_net_image }}"
-          - "IP Address: {{ ansible_net_all_ipv4_addresses[] }}"
           - "Interfaces: {{ ansible_net_interfaces }}"
