@@ -4,6 +4,14 @@
   gather_facts: true
   hosts: sshkey
   tasks:
+    - name: Execute show run command
+      ios_command:
+        commands:
+          - show run
+      register: show_run
+    - name: show run output
+      debug:
+        var: show_run
     - name: configure static route
       ios_static_route:
         prefix: 192.168.2.0
