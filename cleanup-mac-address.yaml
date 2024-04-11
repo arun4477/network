@@ -8,9 +8,9 @@
       ios_command:
         commands:
           - show mac address-table
-      register: mac-address-table
+      register: result1
     - debug:
-        var: mac-address-table
+        var: result1
     - name: Clean up the MAC address table
       ios_command:
         commands:
@@ -19,6 +19,6 @@
       ios_command:
         commands:
           - show mac address-table
-      register: new-mac-address-table
+      register: result2
     - debug:
-        var: new-mac-address-table
+        var: result2
