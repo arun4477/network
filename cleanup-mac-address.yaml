@@ -8,7 +8,7 @@
       ios_command:
         commands:
           - show mac address-table
-      register: mac-address
+      register: mac-address-table
     - debug:
         var: mac-address-table
     - name: Clean up the MAC address table
