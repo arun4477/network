@@ -5,7 +5,7 @@
   hosts: sshkey
   tasks:
     - name: configure static route
-      ios_static_route:
+      ios_static_routes:
         prefix: 192.168.2.0
         mask: 255.255.255.0
         next_hop: 10.20.102.1
