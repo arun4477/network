@@ -1,0 +1,15 @@
+---
+- name: Cisco Switch
+  connection: network_cli
+  gather_facts: true
+  hosts: sshkey
+  tasks:
+    - name: Configure static route
+      ios_static_route:
+        prefix: 10.20.30.0
+        mask: 255.255.255.0
+        next_hop: 10.20.102.1
+        state: present
+      register: route1
+    - debug:
+        var: route1
