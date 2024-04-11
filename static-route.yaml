@@ -16,7 +16,7 @@
                       name: merged_route_1
                       distance_metric: 110
                       tag: 40
-      state: merged           
+        state: merged           
       register: route1
     - debug:
         var: route1
