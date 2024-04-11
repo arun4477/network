@@ -13,6 +13,7 @@
                 - dest: 10.20.30.0/24
                   next_hops:
                     - forward_router_address: 10.20.102.1
+                      name: merged_route_1
         state: merged           
       register: route1
     - debug:
