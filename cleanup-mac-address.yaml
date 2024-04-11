@@ -1,0 +1,24 @@
+---
+- name: Cisco Switch
+  connection: network_cli
+  gather_facts: true
+  hosts: sshkey
+  tasks:
+    - name: Get the MAC address table
+      ios_command:
+        commands:
+          - show mac address-table
+      register: mac-address
+    - debug:
+        var: mac-address-table
+    - name: Clean up the MAC address table
+      ios_command:
+        commands:
+          - clear mac address-table dynamic
+    - name: Get the new MAC address table
+      ios_command:
+        commands:
+          - show mac address-table
+      register: new-mac-address-table
+    - debug:
+        var: new-mac-address-table
