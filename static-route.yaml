@@ -13,9 +13,6 @@
                 - dest: 10.20.30.0/24
                   next_hops:
                     - forward_router_address: 10.20.102.1
-                      name: merged_route_1
-                      distance_metric: 110
-                      tag: 40
         state: merged           
       register: route1
     - debug:
