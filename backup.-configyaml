@@ -1,0 +1,12 @@
+---
+- name: Cisco Switch
+  connection: network_cli
+  gather_facts: true
+  hosts: sshkey
+  tasks:
+    - name: Configurable backup path
+      cisco.ios.ios_config:
+        backup: true
+        backup_options:
+        filename: backup.cfg
+        dir_path: /
