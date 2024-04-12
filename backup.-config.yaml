@@ -9,4 +9,4 @@
         backup: true
         backup_options:
           filename: backup.cfg
-          dir_path: /
+          dir_path: /root/ansible
